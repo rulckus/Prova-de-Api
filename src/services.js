@@ -4,9 +4,31 @@ export function dobro(n) {
     return n * 2;
 }
 
-export function somar(a,b){
-    return a+b;
+export function somar(num1,num2){
+    return num1+num2;
 }
+
+export function temperatura (temp){
+    let a = false
+    if(temp > 38){
+        a = true
+    }
+
+    return a;
+}
+
+export function tabuada (num) {
+    let a = [11];
+    for (let i = 0; i<=10; i++) {
+        a[i] = num * i;
+    }
+    return a;
+}
+
+export function media (n1, n2, n3){
+    return (n1 + n2 + n3) / 3;
+}
+
 
 export function cor(cor){
     let a = "";
@@ -42,7 +64,7 @@ export function cinema(inteira, meia, dia, nacionalidade){
 
 }
 
-export function cara(texto, cr){
+export function caracter(texto, cr){
     let o = 0;
     for(let letter of texto)
     {
@@ -53,3 +75,18 @@ export function cara(texto, cr){
     }
     return o;
 }
+
+export function MaiorNumero(numeros)
+{
+    let maior = -1;
+    for(let item of numeros)
+    {
+        if(item > maior)
+        {
+            maior = item;
+        }
+    }
+    return maior;
+}
+
+
