@@ -42,7 +42,7 @@ server.get('/somar', (req, resp) =>{
 server.post('/somar', (req, resp) =>{
     
     try {
-        const{ valores:{a , b}}= req.body;
+        const{a , b}= req.body;
         const x=somar(a,b)
     
         resp.send({
@@ -57,7 +57,7 @@ server.post('/somar', (req, resp) =>{
 
 server.get('/tabuada', (req, resp) => {
     try {
-    const a = Number(req.query.n);
+    const a = Number(req.query.a);
 
     const x = tabuada(a); 
 
@@ -89,7 +89,7 @@ server.get('/temperatura', (req, resp) =>{
 
 server.post('/media', (req,resp) =>{
     try{
-    const {notas: {n1, n2, n3}} = req.body;
+    const {n1, n2, n3} = req.body;
 
     const x = media(n1,n2,n3);
     resp.send({
@@ -146,7 +146,7 @@ server.get('/dia2/caracter/:texto/:caracter', (req,resp) =>{
         resp.send({
             caracter:x
         })
-        
+
     } catch (err) {
         resp.status(404).send({
             error:err.message
@@ -154,7 +154,7 @@ server.get('/dia2/caracter/:texto/:caracter', (req,resp) =>{
     }
 })
 
-server.post('/dia2/numerao', (req, resp) => {
+server.post('/dia2/maiornumero', (req, resp) => {
     try{
     const a = req.body;
 
